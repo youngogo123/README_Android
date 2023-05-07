@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+<!--두개의 프래그먼트가 들어간다-->
+<!--  동일한 프래그먼트 2분할이 됌-->
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:name="ko.co.company.a2_myfragment2.ListFragment"
+        android:id="@+id/listFragment"
+        />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:name="ko.co.company.a2_myfragment2.ViewerFragment"
+
+        android:id="@+id/ViewerFragment"
+        />
+
+
+</LinearLayout>
