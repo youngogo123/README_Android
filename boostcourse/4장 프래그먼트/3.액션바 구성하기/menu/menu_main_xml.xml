@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--<menu xmlns:android="http://schemas.android.com/apk/res/android" :
+     안드로이드 api에 들어있는 속성을 쓰겠다.-->
+<!--   xmlns:app="http://schemas.android.com/apk/res-auto" :
+       앱에서 정의한 속성-->
+
+<!--  MainActivity에서 settContentView를 이용해서 인플레이션 했던 것처럼
+ mainactivity에서 작업이 필요함-->
+
+    <item android:id="@+id/menu_refresh"
+          android:title="새로고침"
+          android:icon="@drawable/iconpi1"
+           app:showAsAction="always"/>
+    <item android:id="@+id/menu_search"
+           android:title="검색"
+         android:icon="@drawable/iconpi2"
+        app:showAsAction="always|withText"
+        app:actionLayout = "@layout/search_layout"
+
+        />
+<!--   app:actionLayout = "@layout/search_layout" :
+  액션바에 추가적인 기능을 넣는 방법-->
+
+<!--       app:showAsAction="always"/> : 메뉴아이템이 계속 보이게 해달라
+       다른속성도 있음 always,naver... -->
+
+    <item android:id="@+id/menu_settings"
+         android:title="설정"
+        android:icon="@drawable/iconpi1"
+        app:showAsAction="always"/>
+
+
+
+
+
+
+</menu>
+
+<!--res에서 만든 menu 파일에서 menu_main_xml로 파일 만듦
+   _xml붙여서 생성됌..-->
