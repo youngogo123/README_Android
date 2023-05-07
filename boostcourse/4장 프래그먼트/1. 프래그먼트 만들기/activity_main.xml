@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 프래그먼트에서  인텐트는 시스템이 알아 먹을 수 있는 포멧, 피그먼트는 엑티비티 위에서 동작하니 intent를 쓸 수 없음
+           그래서 메소드를 정의해서 액티비티 메소드를 호출하는 방식을 사용함-->
+
+    <!--    하나의 액티비티에 하나의 피ㅡ래그먼트를 전체 화면으로 보여주면 시스템과 관게
+없이 전체 화면을 전환하는 효과를 만들 수 있음-->
+    <!--   액티비티 : 시싀템에서 관리하니 리소스 많이 먹음 =>무겁다
+        프래그먼트 : 액티비티는 그대로 두고 전환하니 조금 더 가벼움, 보안면에서도 장점을 보임-->
+    <!--   프래그먼트는 액티비티 위에 올라가야 프래그먼트로 동작함/ 인플레이션을 위한 변도의 콜백 메소드를 제공함-->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="메인" />
+
+
+    <!-- android:layout_below="@id/button"  => 버튼 아래쪽가지 영역을 차지하겠다.-->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="-5dp"
+        android:text="메뉴" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button">
+        <!--   레이아웃 안의 레이아웃   -->
+        <!--   이 영역에 프래그먼트(부분화면을)을 주고 싶음-->
+
+<!--1.xml에서 fragment나타내게 하는 방법-->
+        <!--<fragment-->
+        <!--    android:id="@+id/mainFragment"-->
+        <!--    android:layout_width="match_parent"-->
+        <!--    android:layout_height="match_parent"-->
+        <!--    android:name="ko.co.company.a4_my_pragment.MainFragment"-->
+        <!--    />-->
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>
